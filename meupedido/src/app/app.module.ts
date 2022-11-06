@@ -34,6 +34,8 @@ import { LoginComponent } from './components/login/login.component';
 import { ToastrModule } from 'ngx-toastr';
 import { ClienteCreateComponent } from './components/cliente/cliente-create/cliente-create.component';
 
+import { NgxMaskModule } from 'ngx-mask'
+
 
 @NgModule({
   declarations: [
@@ -73,7 +75,8 @@ import { ClienteCreateComponent } from './components/cliente/cliente-create/clie
       timeOut:5000,
       closeButton: true,
       progressBar: true
-    })
+    }),
+    NgxMaskModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

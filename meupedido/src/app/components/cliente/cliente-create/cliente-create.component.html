@@ -5,30 +5,48 @@
        <p>
         <mat-form-field class="fullWidth" appearance="outline">
           <mat-label>Nome</mat-label>
-          <input matInput placeholder="Nome">
+          <input 
+            [formControl]="nome"
+            required
+            matInput 
+            placeholder="Nome">
         </mat-form-field>
       </p>
       <p>
         <mat-form-field class="fullWidth" appearance="outline">
           <mat-label>CPF</mat-label>
-          <input matInput placeholder="Cpf">
+          <input 
+            [formControl]="cpf"
+            require
+            matInput 
+            placeholder="Cpf"
+            mask="000.000.000-00">
         </mat-form-field>
       </p>
       <p>
         <mat-form-field class="fullWidth" appearance="outline">
           <mat-label>Email</mat-label>
-          <input matInput placeholder="Email">
+          <input 
+            [formControl]="email"
+            require
+            matInput
+            placeholder="Email">
         </mat-form-field>
       </p>
       <p>
         <mat-form-field class="fullWidth" appearance="outline">
           <mat-label>Telefone</mat-label>
-          <input matInput placeholder="Telefone">
+          <input
+            [formControl]="telefone"
+            require
+            matInput
+            placeholder="Telefone"
+            mask="(00) 0 0000-0000">
         </mat-form-field>
       </p>
 
-      <button class="fullWidth mat-elevation-z4" mat-flat-button color="primary">Cadastrar</button>
-      <button class="fullWidth mat-elevation-z4" mat-stroked-button color="primary">Cancelar</button>
+      <button [disabled]="!validaCampos()" class="fullWidth mat-elevation-z4" mat-flat-button color="primary">Cadastrar</button>
+      <button routerLink="../" class="fullWidth mat-elevation-z4" mat-stroked-button color="primary">Cancelar</button>
     </form>
 
  
