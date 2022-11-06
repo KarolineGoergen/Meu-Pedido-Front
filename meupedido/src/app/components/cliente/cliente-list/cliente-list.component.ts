@@ -12,10 +12,11 @@ import { ClienteService } from 'src/app/services/cliente.service';
 export class ClienteListComponent implements OnInit {
 
   ELEMENT_DATA: Cliente[] = []
-
   
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol', 'acoes'];
   dataSource = new MatTableDataSource<Cliente>(this.ELEMENT_DATA);
+
+  @ViewChild(MatPaginator) paginator: MatPaginator;
 
   constructor(private service: ClienteService) { }
 
@@ -23,19 +24,17 @@ export class ClienteListComponent implements OnInit {
     this.findAll();
   }
   
-
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-
-  ngAfterViewInit() {
-    this.dataSource.paginator = this.paginator;
-  }
-
   findAll(){
     this.service.findAll().subscribe(resposta =>{
       this.ELEMENT_DATA = resposta
       this.dataSource = new MatTableDataSource<Cliente>(resposta);
-
+      this.dataSource.paginator = this.paginator;
     })
   }
 
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
+  
 }

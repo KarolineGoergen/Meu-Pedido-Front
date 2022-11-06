@@ -32,6 +32,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { ClienteListComponent } from './components/cliente/cliente-list/cliente-list.component';
 import { LoginComponent } from './components/login/login.component';
 import { ToastrModule } from 'ngx-toastr';
+import { ClienteCreateComponent } from './components/cliente/cliente-create/cliente-create.component';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { ToastrModule } from 'ngx-toastr';
     HomeComponent,
     HeaderComponent,
     ClienteListComponent,
-    LoginComponent
+    LoginComponent,
+    ClienteCreateComponent
   ],
   imports: [
     BrowserModule,
