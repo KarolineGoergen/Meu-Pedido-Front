@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
   username = new FormControl(null, Validators.email);
   password = new FormControl(null, Validators.minLength(4));
 
-  constructor(private toast: ToastrService) { }
+  constructor(private toast: ToastrService,) { }
 
   ngOnInit(): void {
   }
@@ -30,10 +30,6 @@ export class LoginComponent implements OnInit {
   }
 
   validaCampos(): boolean{
-    if(this.username.valid && this.password.valid){
-      return true;
-    }else{
-      return false;
-    }
+    return this.username.valid && this.password.valid
   }
 }
