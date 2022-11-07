@@ -5,7 +5,9 @@
        <p>
         <mat-form-field class="fullWidth" appearance="outline">
           <mat-label>Nome</mat-label>
-          <input 
+          <input
+            [(ngModel)]="cliente.nome"
+            nome="nome" 
             [formControl]="nome"
             required
             matInput 
@@ -15,7 +17,9 @@
       <p>
         <mat-form-field class="fullWidth" appearance="outline">
           <mat-label>CPF</mat-label>
-          <input 
+          <input
+            [(ngModel)]="cliente.cpf"
+            nome="cpf" 
             [formControl]="cpf"
             require
             matInput 
@@ -27,6 +31,8 @@
         <mat-form-field class="fullWidth" appearance="outline">
           <mat-label>Email</mat-label>
           <input 
+            [(ngModel)]="cliente.email"
+            nome="email"
             [formControl]="email"
             require
             matInput
@@ -37,6 +43,8 @@
         <mat-form-field class="fullWidth" appearance="outline">
           <mat-label>Telefone</mat-label>
           <input
+            [(ngModel)]="cliente.telefone"
+            nome="telefone"
             [formControl]="telefone"
             require
             matInput
@@ -45,7 +53,7 @@
         </mat-form-field>
       </p>
 
-      <button [disabled]="!validaCampos()" class="fullWidth mat-elevation-z4" mat-flat-button color="primary">Cadastrar</button>
+      <button (click)="create()" [disabled]="!validaCampos()" class="fullWidth mat-elevation-z4" mat-flat-button color="primary">Cadastrar</button>
       <button routerLink="../" class="fullWidth mat-elevation-z4" mat-stroked-button color="primary">Cancelar</button>
     </form>
 
