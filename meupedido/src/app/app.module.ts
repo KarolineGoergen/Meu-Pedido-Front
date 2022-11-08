@@ -34,7 +34,8 @@ import { LoginComponent } from './components/login/login.component';
 import { ToastrModule } from 'ngx-toastr';
 import { ClienteCreateComponent } from './components/cliente/cliente-create/cliente-create.component';
 
-import { NgxMaskModule } from 'ngx-mask'
+import { NgxMaskModule } from 'ngx-mask';
+import { ClienteUpdateComponent } from './components/cliente/cliente-update/cliente-update.component'
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import { NgxMaskModule } from 'ngx-mask'
     HeaderComponent,
     ClienteListComponent,
     LoginComponent,
-    ClienteCreateComponent
+    ClienteCreateComponent,
+    ClienteUpdateComponent
   ],
   imports: [
     BrowserModule,

@@ -19,3 +19,11 @@ h2{
     width: 100%;
     text-align: center;
 }
+
+.edit{
+    color: rgba(102,0,255,1);
+}
+
+.delete{
+    color:red;
+}
