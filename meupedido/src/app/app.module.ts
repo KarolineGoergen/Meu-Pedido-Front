@@ -37,6 +37,10 @@ import { ClienteCreateComponent } from './components/cliente/cliente-create/clie
 import { NgxMaskModule } from 'ngx-mask';
 import { ClienteUpdateComponent } from './components/cliente/cliente-update/cliente-update.component';
 import { ClienteDeleteComponent } from './components/cliente/cliente-delete/cliente-delete.component';
+import { ProdutoListComponent } from './components/produto/produto-list/produto-list.component';
+import { ProdutoCreateComponent } from './components/produto/produto-create/produto-create.component';
+import { ProdutoUpdateComponent } from './components/produto/produto-update/produto-update.component';
+import { ProdutoDeleteComponent } from './components/produto/produto-delete/produto-delete.component';
 
 
 @NgModule({
@@ -50,6 +54,10 @@ import { ClienteDeleteComponent } from './components/cliente/cliente-delete/clie
     ClienteCreateComponent,
     ClienteUpdateComponent,
     ClienteDeleteComponent,
+    ProdutoListComponent,
+    ProdutoCreateComponent,
+    ProdutoUpdateComponent,
+    ProdutoDeleteComponent,
     
   ],
   imports: [

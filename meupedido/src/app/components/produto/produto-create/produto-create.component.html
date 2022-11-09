@@ -1,56 +1,51 @@
 <div class="container mat-elevation-z4">
     <form class="form">
-       <h2>Cadastrar Cliente</h2>  
+       <h2>Cadastrar Produto</h2>  
 
        <p>
         <mat-form-field class="fullWidth" appearance="outline">
           <mat-label>Nome</mat-label>
           <input
-            [(ngModel)]="cliente.nome"
+            [(ngModel)]="produto.nome"
             nome="nome" 
             [formControl]="nome"
             required
             matInput 
-            placeholder="Nome"
-            >
+            placeholder="Nome">
         </mat-form-field>
       </p>
       <p>
         <mat-form-field class="fullWidth" appearance="outline">
-          <mat-label>CPF</mat-label>
+          <mat-label>Descrição</mat-label>
           <input
-            [(ngModel)]="cliente.cpf"
-            nome="cpf" 
-            [formControl]="cpf"
-            require
+            [(ngModel)]="produto.descricao"
+            nome="descricao"
+            [formControl]="descricao"
             matInput 
-            placeholder="Cpf"
-            mask="000.000.000-00">
+            placeholder="Ex:Observações">
         </mat-form-field>
       </p>
       <p>
         <mat-form-field class="fullWidth" appearance="outline">
-          <mat-label>Email</mat-label>
+          <mat-label>Unidade de Medida</mat-label>
           <input 
-            [(ngModel)]="cliente.email"
-            nome="email"
-            [formControl]="email"
-            require
+            [(ngModel)]="produto.unMedida"
+            nome="unMedida"
+            [formControl]="unMedida"
             matInput
-            placeholder="Email">
+            placeholder="Ex:Unidade">
         </mat-form-field>
       </p>
       <p>
         <mat-form-field class="fullWidth" appearance="outline">
-          <mat-label>Telefone</mat-label>
+          <mat-label>Valor Unitário</mat-label>
           <input
-            [(ngModel)]="cliente.telefone"
-            nome="telefone"
-            [formControl]="telefone"
+            [(ngModel)]="produto.valorUn"
+            nome="valorUn"
+            [formControl]="valorUn"
             require
             matInput
-            placeholder="Telefone"
-            mask="(00) 0 0000-0000">
+            placeholder="Ex:00.00">
         </mat-form-field>
       </p>
 

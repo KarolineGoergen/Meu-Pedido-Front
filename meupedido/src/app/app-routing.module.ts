@@ -7,6 +7,10 @@ import { ClienteUpdateComponent } from './components/cliente/cliente-update/clie
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { NavComponent } from './components/nav/nav.component';
+import { ProdutoCreateComponent } from './components/produto/produto-create/produto-create.component';
+import { ProdutoDeleteComponent } from './components/produto/produto-delete/produto-delete.component';
+import { ProdutoListComponent } from './components/produto/produto-list/produto-list.component';
+import { ProdutoUpdateComponent } from './components/produto/produto-update/produto-update.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -19,6 +23,11 @@ const routes: Routes = [
       {path: 'clientes/create', component: ClienteCreateComponent},
       {path: 'clientes/update/:id', component: ClienteUpdateComponent},
       {path: 'clientes/delete/:id', component: ClienteDeleteComponent},
+
+      {path: 'produtos', component: ProdutoListComponent},
+      {path: 'produtos/create', component: ProdutoCreateComponent},
+      {path: 'produtos/update/:id', component: ProdutoUpdateComponent},
+      {path: 'produtos/delete/:id', component: ProdutoDeleteComponent},
     ]
   }
 ];
