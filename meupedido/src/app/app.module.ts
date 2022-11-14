@@ -25,6 +25,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
+
 //Componentes
 import { NavComponent } from './components/nav/nav.component';
 import { HomeComponent } from './components/home/home.component';
@@ -42,6 +43,7 @@ import { ProdutoCreateComponent } from './components/produto/produto-create/prod
 import { ProdutoUpdateComponent } from './components/produto/produto-update/produto-update.component';
 import { ProdutoDeleteComponent } from './components/produto/produto-delete/produto-delete.component';
 import { EncomendaListComponent } from './components/encomenda/encomenda-list/encomenda-list.component';
+import { EncomendaCreateComponent } from './components/encomenda/encomenda-create/encomenda-create.component';
 
 
 @NgModule({
@@ -60,6 +62,7 @@ import { EncomendaListComponent } from './components/encomenda/encomenda-list/en
     ProdutoUpdateComponent,
     ProdutoDeleteComponent,
     EncomendaListComponent,
+    EncomendaCreateComponent,
     
   ],
   imports: [

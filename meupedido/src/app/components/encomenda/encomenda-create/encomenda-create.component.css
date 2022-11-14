@@ -1,0 +1,37 @@
+.container{
+    width: 70rem;
+    margin: auto auto 3rem auto;
+    padding: 1rem 1rem 3rem 1rem;
+    border-radius: .6rem;
+}
+
+h2{
+    width: 100%;
+    text-align: center;
+}
+
+.fullWidth{
+    width: 100%;
+}
+
+button{
+    margin-top: .5rem;
+}
+
+.produto mat-form-field {
+    width: 49%;
+ }
+
+.produto {
+    display: flex;
+    justify-content: space-between;
+}
+
+.valor mat-form-field {
+    width: 49%;
+ }
+
+.valor {
+    display: flex;
+    justify-content: space-between;
+}
