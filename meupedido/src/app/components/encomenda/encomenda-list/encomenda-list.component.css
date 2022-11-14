@@ -27,3 +27,9 @@ h2{
 .delete{
     color:red;
 }
+
+mat-radio-group{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+}

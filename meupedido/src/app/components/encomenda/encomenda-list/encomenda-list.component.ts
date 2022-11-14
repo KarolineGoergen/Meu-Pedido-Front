@@ -13,6 +13,7 @@ export class EncomendaListComponent implements OnInit {
 
   
   ELEMENT_DATA: Encomenda[] = []
+  FILTERED_DATA: Encomenda[] = []
   
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol', 'acoes'];
   dataSource = new MatTableDataSource<Encomenda>(this.ELEMENT_DATA);
@@ -36,5 +37,26 @@ export class EncomendaListComponent implements OnInit {
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
+
+  retornaStatus(status: any): string{
+    if(status == '0'){
+      return 'PRODUÇÃO'
+    } else if(status == '1'){
+      return 'ENTREGUE'
+    } else {
+      return 'CANCELADO'
+    }
+  }
+
+  ordenaStatus(status: any): void{
+    let list: Encomenda[] = []
+    this.ELEMENT_DATA.forEach(element =>{
+      if(element.status == status)
+      list.push(element)
+    });
+    this.FILTERED_DATA = list;
+    this.dataSource = new MatTableDataSource<Encomenda>(list);
+    this.dataSource.paginator = this.paginator;
   }
 }
