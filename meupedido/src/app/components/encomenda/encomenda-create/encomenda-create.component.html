@@ -4,7 +4,10 @@
       <div class="status-encomenda">
         <mat-form-field class="fullWidth" appearance="outline">
             <mat-label>Status do Pedido</mat-label>
-            <mat-select>
+            <mat-select   
+              [(ngModel)]="encomenda.status"
+              nome="status" 
+              required>
               <mat-option value="0">PRODUÇÃO</mat-option>
               <mat-option value="1">ENTREGUE</mat-option>
             </mat-select>
@@ -13,7 +16,10 @@
       <div class="cliente">
         <mat-form-field class="fullWidth" appearance="outline">
             <mat-label>Selecionar Cliente</mat-label>
-            <mat-select>
+            <mat-select
+              [(ngModel)]="encomenda.cliente"
+              nome="cliente" 
+              required>
               <mat-option *ngFor="let cli of cliente" value="{{cli.id}}">{{cli.nome}}</mat-option>
             </mat-select>
           </mat-form-field>
@@ -21,7 +27,8 @@
       <div class="produto">
         <mat-form-field appearance="outline">
             <mat-label>Selecionar Produtos</mat-label>
-                <mat-select>
+                <mat-select 
+                  required>
                 <mat-option *ngFor="let prod of produto" value="{{prod.id}}">{{prod.nome}}</mat-option>
                 </mat-select>
             </mat-form-field>
@@ -29,7 +36,10 @@
             
                 <mat-form-field appearance="outline">
                   <mat-label>Quantidade</mat-label>
-                    <input matInput placeholder="Ex:01"
+                    <input
+                    required 
+                    matInput
+                    placeholder="Ex:01"
                     mask="00">
                 </mat-form-field>
               
@@ -44,7 +54,12 @@
 
                 <mat-form-field appearance="outline">
                   <mat-label>Data e Hora da Entrega</mat-label>
-                    <input matInput placeholder="Ex:00/00/0000 00:00:00"
+                    <input 
+                    [(ngModel)]="encomenda.dataEntrega"
+                    nome="dataEntrega" 
+                    required 
+                    matInput 
+                    placeholder="Ex:00/00/0000 00:00:00"
                     mask="00/00/0000 00:00:00">
                 </mat-form-field>
     
@@ -54,7 +69,11 @@
       <form class="observacao">
         <mat-form-field class="fullWidth" appearance="outline">
           <mat-label>Observações</mat-label>
-            <textarea matInput placeholder=""></textarea>
+            <textarea
+              [(ngModel)]="encomenda.observacao"
+              nome="observacao" 
+              matInput 
+              placeholder=""></textarea>
         </mat-form-field>
       </form>
 
@@ -62,25 +81,41 @@
       <p>
         <mat-form-field class="fullWidth" appearance="outline">
           <mat-label>Cidade</mat-label>
-            <input matInput placeholder="Ex:Pontal do Paraná">
+            <input
+              [(ngModel)]="encomenda.cidade"
+              nome="cidade"
+              matInput 
+              placeholder="Ex:Pontal do Paraná">
         </mat-form-field>
       </p>
       <p>
         <mat-form-field class="fullWidth" appearance="outline">
           <mat-label>Bairro</mat-label>
-            <input matInput placeholder="Ex:Praia de Leste">
+            <input 
+              [(ngModel)]="encomenda.bairro"
+              nome="bairro"
+              matInput 
+              placeholder="Ex:Praia de Leste">
         </mat-form-field>
       </p>
       <p>
         <mat-form-field class="fullWidth" appearance="outline">
           <mat-label>Logradouro</mat-label>
-            <input matInput placeholder="Ex:Avenida Beira Mar">
+            <input
+              [(ngModel)]="encomenda.logradouro"
+              nome="logradouro" 
+              matInput 
+              placeholder="Ex:Avenida Beira Mar">
         </mat-form-field>
       </p>
       <p>
         <mat-form-field class="fullWidth" appearance="outline">
           <mat-label>Número</mat-label>
-            <input matInput placeholder="Ex:1234">
+            <input
+              [(ngModel)]="encomenda.numero"
+              nome="numero"
+              matInput
+              placeholder="Ex:1234">
         </mat-form-field>
       </p>
 

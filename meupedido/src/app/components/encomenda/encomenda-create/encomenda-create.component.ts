@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Cliente } from 'src/app/models/cliente';
 import { Encomenda } from 'src/app/models/encomenda';
+import { Item } from 'src/app/models/item';
 import { Produto } from 'src/app/models/produto';
 import { ClienteService } from 'src/app/services/cliente.service';
 import { EncomendaService } from 'src/app/services/encomenda.service';
@@ -31,9 +33,10 @@ export class EncomendaCreateComponent implements OnInit {
     status: ''
   }
 
+  item: Item[]=[]
   cliente: Cliente[] = []
   produto: Produto[] = []
-  
+
   constructor( 
     private encomendaService: EncomendaService,
     private clienteService: ClienteService,

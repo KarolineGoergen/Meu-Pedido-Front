@@ -4,13 +4,13 @@ export interface Encomenda{
     dataEntrega: any,
     observacao: string,
     valorTotal: number,
-    itens: [],
+    itens?: [],
     cliente: any,
-    nomeCliente: string,
-    cidade: string,
-    bairro: string,
-    logradouro: string,
-    numero: number,
+    nomeCliente?: string,
+    cidade?: string,
+    bairro?: string,
+    logradouro?: string,
+    numero?: number,
     status?: any
 
 }
