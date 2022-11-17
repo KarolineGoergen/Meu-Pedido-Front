@@ -29,8 +29,9 @@
         <mat-form-field appearance="outline">
             <mat-label>Selecionar Produto</mat-label>
                 <mat-select
-                  [(ngModel)]="encomenda.itens"
+                  (valueChange)="addProduto($event)"
                   nome="produto" 
+                  [(ngModel)]="produtoIdSelecionado"
                   required>
                 <mat-option *ngFor="let prod of produto" value="{{prod.id}}">{{prod.nome}} {{prod.valorUn}}</mat-option>
                 </mat-select>
@@ -38,7 +39,7 @@
                 <mat-form-field appearance="outline">
                   <mat-label>Quantidade</mat-label>
                     <input
-                    [(ngModel)]="encomenda.itens"
+                    (keyup)="addQuantidade($event)"
                     nome="quantidade" 
                     required 
                     matInput

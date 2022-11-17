@@ -36,6 +36,8 @@ export class EncomendaCreateComponent implements OnInit {
   cliente: Cliente[] = []
   produto: Produto[] = []
 
+  produtoIdSelecionado: number
+
   constructor( 
     private encomendaService: EncomendaService,
     private clienteService: ClienteService,
@@ -47,6 +49,22 @@ export class EncomendaCreateComponent implements OnInit {
   ngOnInit(): void {
     this.findAllCliente();
     this.findAllProduto();
+  }
+  
+  addProduto(idProduto: number): void{
+
+    if(this.encomenda.itens.length == 0) this.addProdutoLista(idProduto)
+    
+    if(!this.itemExisteLista(idProduto)) this.addProdutoLista(idProduto)
+   
+  }
+
+  addQuantidade(quantidade: any): void{
+    this.encomenda.itens.forEach(item=>{
+      if(item.produto === this.produtoIdSelecionado){
+        item.quantidade = quantidade.target.value
+      }
+    })
   }
 
   create(): void{
@@ -74,6 +92,24 @@ export class EncomendaCreateComponent implements OnInit {
     this.produtoService.findAll().subscribe(resposta =>{
       this.produto = resposta;
     })
+  }
+
+  private addProdutoLista(idProduto: number): void{
+    const novoItem: Item = {
+      produto: idProduto,
+      quantidade: 0
+    }
+    this.encomenda.itens.push(novoItem)
+  } 
+
+  private itemExisteLista(idProduto: number): boolean{
+    this.encomenda.itens.some(item =>{
+      if(item.produto === idProduto){
+        return true
+      }
+      return false
+    })
+    return false
   }
 
 }
