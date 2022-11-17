@@ -59,4 +59,5 @@ export class EncomendaListComponent implements OnInit {
     this.dataSource = new MatTableDataSource<Encomenda>(list);
     this.dataSource.paginator = this.paginator;
   }
+  
 }

@@ -1,10 +1,12 @@
+import { Item } from "./item";
+
 export interface Encomenda{
     id?: any,
     dataEncomenda?: any,
     dataEntrega: any,
     observacao: string,
     valorTotal: number,
-    itens?: [],
+    itens?: Item[],
     cliente: any,
     nomeCliente?: string,
     cidade?: string,

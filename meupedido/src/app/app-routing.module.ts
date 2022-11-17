@@ -6,7 +6,6 @@ import { ClienteListComponent } from './components/cliente/cliente-list/cliente-
 import { ClienteUpdateComponent } from './components/cliente/cliente-update/cliente-update.component';
 import { EncomendaCreateComponent } from './components/encomenda/encomenda-create/encomenda-create.component';
 import { EncomendaListComponent } from './components/encomenda/encomenda-list/encomenda-list.component';
-import { EncomendaReadComponent } from './components/encomenda/encomenda-read/encomenda-read.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { NavComponent } from './components/nav/nav.component';
@@ -34,7 +33,7 @@ const routes: Routes = [
 
       {path: 'encomendas', component: EncomendaListComponent},
       {path: 'encomendas/create', component: EncomendaCreateComponent},
-      {path: 'encomendas/read', component: EncomendaReadComponent},
+
     ]
   }
 ];

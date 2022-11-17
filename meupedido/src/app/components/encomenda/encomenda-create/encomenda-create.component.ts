@@ -33,7 +33,6 @@ export class EncomendaCreateComponent implements OnInit {
     status: ''
   }
 
-  item: Item[]=[]
   cliente: Cliente[] = []
   produto: Produto[] = []
 
@@ -64,7 +63,7 @@ export class EncomendaCreateComponent implements OnInit {
       }
     })
   }
-
+  
   findAllCliente(): void{
     this.clienteService.findAll().subscribe(resposta =>{
       this.cliente = resposta;
