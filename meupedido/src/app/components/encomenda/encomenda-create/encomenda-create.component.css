@@ -19,19 +19,10 @@ button{
 }
 
 .produto mat-form-field {
-    width: 30%;
- }
-
-.produto {
-    display: flex;
-    justify-content: space-between;
-}
-
-.valor mat-form-field {
     width: 49%;
  }
 
-.valor {
+.produto {
     display: flex;
     justify-content: space-between;
 }

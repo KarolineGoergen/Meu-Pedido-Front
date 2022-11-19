@@ -53,7 +53,9 @@ export class EncomendaCreateComponent implements OnInit {
   
   addProduto(idProduto: number): void{
 
-    if(this.encomenda.itens.length == 0) this.addProdutoLista(idProduto)
+    //if(this.encomenda.itens.length == 0) {
+      //this.addProdutoLista(idProduto)
+   //}
     
     if(!this.itemExisteLista(idProduto)) this.addProdutoLista(idProduto)
    
