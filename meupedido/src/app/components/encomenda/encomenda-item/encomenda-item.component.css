@@ -12,7 +12,6 @@ mat-form-field{
 }
 
 button{
-    margin-top: .5rem;
     width: 100%;
 }
 
@@ -21,16 +20,3 @@ h2{
     text-align: center;
 }
 
-.edit{
-    color: rgba(102,0,255,1);
-}
-
-.delete{
-    color:red;
-}
-
-mat-radio-group{
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 1rem;
-}

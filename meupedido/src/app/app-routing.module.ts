@@ -5,6 +5,8 @@ import { ClienteDeleteComponent } from './components/cliente/cliente-delete/clie
 import { ClienteListComponent } from './components/cliente/cliente-list/cliente-list.component';
 import { ClienteUpdateComponent } from './components/cliente/cliente-update/cliente-update.component';
 import { EncomendaCreateComponent } from './components/encomenda/encomenda-create/encomenda-create.component';
+import { EncomendaDeleteComponent } from './components/encomenda/encomenda-delete/encomenda-delete.component';
+import { EncomendaItemComponent } from './components/encomenda/encomenda-item/encomenda-item.component';
 import { EncomendaListComponent } from './components/encomenda/encomenda-list/encomenda-list.component';
 import { EncomendaUpdateComponent } from './components/encomenda/encomenda-update/encomenda-update.component';
 import { HomeComponent } from './components/home/home.component';
@@ -33,8 +35,10 @@ const routes: Routes = [
       {path: 'produtos/delete/:id', component: ProdutoDeleteComponent},
 
       {path: 'encomendas', component: EncomendaListComponent},
+      {path: 'encomendas/item', component: EncomendaItemComponent},
       {path: 'encomendas/create', component: EncomendaCreateComponent},
       {path: 'encomendas/update/:id', component: EncomendaUpdateComponent},
+      {path: 'encomendas/delete/:id', component: EncomendaDeleteComponent},
 
     ]
   }

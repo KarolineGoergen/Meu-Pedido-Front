@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
+import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Cliente } from 'src/app/models/cliente';
@@ -35,6 +36,7 @@ export class EncomendaCreateComponent implements OnInit {
 
   cliente: Cliente[] = []
   produto: Produto[] = []
+  encomendaList: Encomenda[] = []
 
   produtoIdSelecionado: number
 
@@ -84,6 +86,12 @@ export class EncomendaCreateComponent implements OnInit {
     })
   }
   
+  findAllEncomenda(): void{
+    this.encomendaService.findAll().subscribe(resposta =>{
+      this.encomendaList = resposta;
+    })
+  }
+
   findAllCliente(): void{
     this.clienteService.findAll().subscribe(resposta =>{
       this.cliente = resposta;
