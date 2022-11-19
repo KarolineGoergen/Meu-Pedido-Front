@@ -45,6 +45,7 @@ import { ProdutoDeleteComponent } from './components/produto/produto-delete/prod
 import { EncomendaListComponent } from './components/encomenda/encomenda-list/encomenda-list.component';
 import { EncomendaCreateComponent } from './components/encomenda/encomenda-create/encomenda-create.component';
 import { EncomendaUpdateComponent } from './components/encomenda/encomenda-update/encomenda-update.component';
+import { EncomendaDeleteComponent } from './components/encomenda/encomenda-delete/encomenda-delete.component';
 
 
 @NgModule({
@@ -65,6 +66,7 @@ import { EncomendaUpdateComponent } from './components/encomenda/encomenda-updat
     EncomendaListComponent,
     EncomendaCreateComponent,
     EncomendaUpdateComponent,
+    EncomendaDeleteComponent,
     
   ],
   imports: [
