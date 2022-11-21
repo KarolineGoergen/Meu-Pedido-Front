@@ -25,6 +25,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+
 
 //Componentes
 import { NavComponent } from './components/nav/nav.component';
@@ -95,12 +97,15 @@ import { EncomendaItemComponent } from './components/encomenda/encomenda-item/en
     MatIconModule,
     MatListModule,
     MatCardModule,
+    MatDatepickerModule,
     ToastrModule.forRoot({
       timeOut:5000,
       closeButton: true,
       progressBar: true
     }),
-    NgxMaskModule.forRoot()
+    NgxMaskModule.forRoot({
+      dropSpecialCharacters: false
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

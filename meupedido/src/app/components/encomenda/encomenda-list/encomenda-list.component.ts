@@ -4,6 +4,10 @@ import { MatTableDataSource } from '@angular/material/table';
 import { Encomenda } from 'src/app/models/encomenda';
 import { EncomendaService } from 'src/app/services/encomenda.service';
 
+import { registerLocaleData } from '@angular/common';
+import localePT from '@angular/common/locales/pt';
+registerLocaleData(localePT);
+
 @Component({
   selector: 'app-encomenda-list',
   templateUrl: './encomenda-list.component.html',

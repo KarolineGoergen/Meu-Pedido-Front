@@ -70,16 +70,17 @@
                 </mat-form-field>
 
 
-      <form class="observacao">
-        <mat-form-field class="fullWidth" appearance="outline">
-          <mat-label>Observações</mat-label>
-            <textarea
-              [(ngModel)]="encomenda.observacao"
-              nome="observacao" 
-              matInput 
-              placeholder=""></textarea>
-        </mat-form-field>
-      </form>
+     <div class="obervacao">
+      <mat-form-field class="fullWidth" appearance="outline">
+        <mat-label>Observação</mat-label>
+          <input 
+          [(ngModel)]="encomenda.observacao"
+          nome="observacao" 
+          required 
+          matInput >
+      </mat-form-field>
+
+     </div>
 
       <h2>Será para entrega? Informe o endereço</h2>
       <p>
