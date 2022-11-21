@@ -53,22 +53,9 @@ export class EncomendaCreateComponent implements OnInit {
     this.findAllProduto();
   }
 
-  qtd = "";
-  tarefa = "";
   produtos = []
   quantidade = []
-
-  addTarefa(){
-
-    this.produtos.push(this.tarefa)
-
-  }
-
-  addQtdTarefa(){
-    console.log(this.quantidade)
-    this.quantidade.push(this.qtd)
-  }
-
+  
   addProduto(idProduto: number): void{
 
     //if(this.encomenda.itens.length == 0) {

@@ -26,3 +26,12 @@ button{
     display: flex;
     justify-content: space-between;
 }
+
+.info mat-form-field {
+    width: 49%;
+ }
+
+.info {
+    display: flex;
+    justify-content: space-between;
+}

@@ -32,7 +32,6 @@
                   (valueChange)="addProduto($event)"
                   nome="produto" 
                   [(ngModel)]="produtoIdSelecionado"
-                  [(ngModel)]="tarefa"
                   required>
                 <mat-option *ngFor="let prod of produto" value="{{prod.id}}">{{prod.nome}} {{prod.valorUn}}</mat-option>
                 </mat-select>
@@ -42,19 +41,18 @@
                     <input
                     (keyup)="addQuantidade($event)"
                     required 
-                    [(ngModel)]="qtd"
                     matInput
                     placeholder="Ex:12"
                     mask="00">
               </mat-form-field>        
         </div>
 
-        <button (click)="addTarefa()" (click)=" addQtdTarefa()" class="fullWidth mat-elevation-z4" mat-flat-button color="primary">Adicionar</button>
+        <button class="fullWidth mat-elevation-z4" mat-flat-button color="primary">Adicionar</button>
 
         <mat-form-field class="fullWidth" appearance="outline">
           <mat-label>Itens</mat-label>
               <mat-select>
-              <mat-option *ngFor="let p of produtos" >Produto: {{p}}</mat-option>
+              <mat-option *ngFor="let p of encomenda.itens" >Produto: {{p.produto}} {{p.quantidade}}</mat-option>
               </mat-select>
           </mat-form-field>  
 
