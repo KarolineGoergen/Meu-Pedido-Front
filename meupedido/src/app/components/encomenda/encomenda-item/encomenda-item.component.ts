@@ -14,7 +14,7 @@ export class EncomendaItemComponent implements OnInit {
   ELEMENT_DATA: Encomenda[] = []
   FILTERED_DATA: Encomenda[] = []
   
-  displayedColumns: string[] = ['nome', 'data', 'valor', 'observacao', 'cidade', 'bairro', 'logradouro', 'numero', 'itens'];
+  displayedColumns: string[] = ['nome', 'data', 'valor', 'observacao', 'cidade', 'bairro', 'logradouro', 'numero', 'itens' , 'itens1'];
   dataSource = new MatTableDataSource<Encomenda>(this.ELEMENT_DATA);
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
