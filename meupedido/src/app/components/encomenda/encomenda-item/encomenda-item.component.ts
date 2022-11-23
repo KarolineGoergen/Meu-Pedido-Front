@@ -1,9 +1,15 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatPaginator } from '@angular/material/paginator';
+import { Component, OnInit } from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
 import { MatTableDataSource } from '@angular/material/table';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+import { Cliente } from 'src/app/models/cliente';
 import { Encomenda } from 'src/app/models/encomenda';
+import { Item } from 'src/app/models/item';
+import { Produto } from 'src/app/models/produto';
+import { ClienteService } from 'src/app/services/cliente.service';
 import { EncomendaService } from 'src/app/services/encomenda.service';
-
+import { ProdutoService } from 'src/app/services/produto.service';
 
 @Component({
   selector: 'app-encomenda-item',
@@ -11,26 +17,38 @@ import { EncomendaService } from 'src/app/services/encomenda.service';
   styleUrls: ['./encomenda-item.component.css']
 })
 export class EncomendaItemComponent implements OnInit {
-  ELEMENT_DATA: Encomenda[] = []
-  FILTERED_DATA: Encomenda[] = []
-  
-  displayedColumns: string[] = ['nome', 'data', 'valor', 'observacao', 'cidade', 'bairro', 'logradouro', 'numero', 'itens' , 'itens1'];
-  dataSource = new MatTableDataSource<Encomenda>(this.ELEMENT_DATA);
+ 
+  encomenda: Encomenda = {
+    id: '',
+    dataEncomenda: '',
+    dataEntrega: '',
+    observacao: '',
+    valorTotal: 0,
+    itens: [],
+    cliente: '',
+    nomeCliente: '',
+    cidade: '',
+    bairro: '',
+    logradouro: '',
+    numero: 0,
+    status: ''
+  }
 
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-
-  constructor(private service: EncomendaService) { }
+  constructor( 
+    private encomendaService: EncomendaService,
+    private route: ActivatedRoute,)
+    { }
 
   ngOnInit(): void {
-    this.findAll();
+    this.encomenda.id = this.route.snapshot.paramMap.get('id');
+    this.findById();
   }
-  
-  findAll(){
-    this.service.findAll().subscribe(resposta =>{
-      this.ELEMENT_DATA = resposta
-      this.dataSource = new MatTableDataSource<Encomenda>(resposta);
-      this.dataSource.paginator = this.paginator;
+
+  findById(): void{
+    this.encomendaService.findById(this.encomenda.id).subscribe(resposta => {
+      this.encomenda = resposta;
     })
   }
+
 
 }

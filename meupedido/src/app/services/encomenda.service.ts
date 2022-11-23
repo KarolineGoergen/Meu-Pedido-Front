@@ -27,7 +27,7 @@ export class EncomendaService{
         return this.http.put<Encomenda>(`${API_CONFIG.baseUrl}/encomendas/${encomenda.id}`, encomenda);
     }
 
-    delete(id: any): Observable<Encomenda>{
-        return this.http.delete<Encomenda>(`${API_CONFIG.baseUrl}/encomendas/${id}`);
-      }
+    update2(encomenda: Encomenda): Observable<Encomenda>{
+        return this.http.put<Encomenda>(`${API_CONFIG.baseUrl}/encomendas/cancelar/${encomenda.id}`, encomenda);
+    }
 }

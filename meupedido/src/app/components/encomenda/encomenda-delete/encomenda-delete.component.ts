@@ -48,7 +48,7 @@ export class EncomendaDeleteComponent implements OnInit {
   }
 
   delete(): void{
-    this.service.delete(this.encomenda).subscribe(resposta =>{
+    this.service.update2(this.encomenda).subscribe(resposta =>{
       this.toast.success('Encomenda cancelada!', 'Status');
       this.router.navigate(['encomendas']);
     }, ex =>{

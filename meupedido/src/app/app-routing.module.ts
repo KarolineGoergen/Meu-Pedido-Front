@@ -38,7 +38,8 @@ const routes: Routes = [
       {path: 'encomendas/item', component: EncomendaItemComponent},
       {path: 'encomendas/create', component: EncomendaCreateComponent},
       {path: 'encomendas/update/:id', component: EncomendaUpdateComponent},
-      {path: 'encomendas/delete/:id', component: EncomendaDeleteComponent},
+      {path: 'encomendas/delete/cancelar/:id', component: EncomendaDeleteComponent},
+      {path: 'encomendas/item/:id', component: EncomendaItemComponent},
 
     ]
   }

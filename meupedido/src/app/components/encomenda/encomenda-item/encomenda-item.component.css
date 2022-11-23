@@ -1,19 +1,8 @@
 .container{
-    width: 90%;
-    margin: auto;
-}
-
-table {
-    width: 100%;
-}
-
-mat-form-field{
-    width: 100%;
-}
-
-button{
-    margin-top: .5rem;
-    width: 100%;
+    width: 70rem;
+    margin: auto auto 3rem auto;
+    padding: 1rem 1rem 3rem 1rem;
+    border-radius: .6rem;
 }
 
 h2{
@@ -21,3 +10,10 @@ h2{
     text-align: center;
 }
 
+.fullWidth{
+    width: 100%;
+}
+
+button{
+    margin-top: .5rem;
+}
