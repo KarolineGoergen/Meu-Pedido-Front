@@ -24,7 +24,6 @@ export class ClienteUpdateComponent implements OnInit {
   }
 
   nome: FormControl = new FormControl(null,Validators.minLength(3));
-  cpf: FormControl = new FormControl(null,Validators.required);
   email: FormControl = new FormControl(null,Validators.email);
   telefone: FormControl = new FormControl(null,Validators.required);
 
@@ -43,7 +42,6 @@ export class ClienteUpdateComponent implements OnInit {
 
   validaCampos(): boolean{
     return this.nome.valid &&
-    this.cpf.valid &&
     this.email.valid &&
     this.telefone.valid
   }
